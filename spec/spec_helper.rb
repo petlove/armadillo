@@ -2,12 +2,16 @@
 
 require 'bundler/setup'
 require 'support/configs/simple_cov_config'
-require 'support/configs/vcr_config'
 SimpleCovConfig.configure
 
-require 'my_gem'
-require 'pry'
-VCRConfig.configure
+require 'armadillo'
+
+ENV['APP_ENV'] = 'cf'
+
+require File.expand_path('../spec/dummy/config/environment.rb', __dir__)
+ENV['RAILS_ROOT'] ||= "#{File.dirname(__FILE__)}../../../spec/dummy"
+
+require 'rspec/rails'
 
 RSpec.configure do |config|
   config.disable_monkey_patching!

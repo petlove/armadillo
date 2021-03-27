@@ -1,29 +1,32 @@
 # frozen_string_literal: true
 
 $LOAD_PATH.push File.expand_path('lib', __dir__)
-require 'my_gem/version'
+require 'armadillo/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'my_gem'
-  spec.version       = MyGem::VERSION
+  spec.name          = 'petlove-armadillo'
+  spec.version       = Armadillo::VERSION
   spec.authors       = ['linqueta']
   spec.email         = ['lincolnrodrs@gmail.com']
 
-  spec.summary       = 'my_gem'
-  spec.description   = 'my_gem'
-  spec.homepage      = 'https://https://github.com/petlove/my_gem'
+  spec.summary       = 'Armadillo'
+  spec.description   = 'Petlove Environment Marker'
+  spec.homepage      = 'https://https://github.com/petlove/armadillo'
   spec.license       = 'MIT'
 
   spec.files         = Dir['{app,config,lib}/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'README.md']
 
-  spec.add_development_dependency 'bundler', '~> 2.0'
+  spec.required_ruby_version = '>= 2.5.0'
+  spec.add_dependency 'nokogiri', '>= 1.10.4'
+  spec.add_dependency 'rack-dev-mark', '>= 0.7.8'
+  spec.add_dependency 'rails', '>= 5.2.3'
+
+  spec.add_development_dependency 'bundler', '~> 2.2.15'
   spec.add_development_dependency 'pry-byebug', '>= 3.7.0'
   spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'rspec-rails', '~> 5.0.1'
   spec.add_development_dependency 'rubocop', '>= 0.74.0'
   spec.add_development_dependency 'rubocop-performance', '>= 1.4.1'
   spec.add_development_dependency 'simplecov', '>= 0.17.0'
   spec.add_development_dependency 'simplecov-console', '>= 0.5.0'
-  spec.add_development_dependency 'vcr', '>= 5.0.0'
-  spec.add_development_dependency 'webmock', '>= 3.7.6'
 end

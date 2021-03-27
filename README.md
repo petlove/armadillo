@@ -1,4 +1,4 @@
-# [MyGem][gem_page]
+# [Armadillo][gem_page]
 
 [![Build Status][travis_status_image]][travis_page]
 [![Maintainability][code_climate_maintainability_image]][code_climate_maintainability_page]

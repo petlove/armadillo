@@ -10,6 +10,7 @@ module SimpleCovConfig
     SimpleCov.start do
       add_filter { |source_file| cover?(source_file.lines) }
       add_filter '/spec/'
+      add_filter '/lib/armadillo/configuration'
     end
   end
 
