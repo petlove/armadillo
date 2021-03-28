@@ -1,10 +1,6 @@
 # [Armadillo][gem_page]
 
-[![Build Status][travis_status_image]][travis_page]
-[![Maintainability][code_climate_maintainability_image]][code_climate_maintainability_page]
-[![Test Coverage][code_climate_test_coverage_image]][code_climate_test_coverage_page]
-
-https://github.com/petlove/armadillo/actions/workflows/ruby/badge.svg
+[![Tests](https://github.com/petlove/armadillo/actions/workflows/tests.yml/badge.svg)](https://github.com/petlove/armadillo/actions/workflows/tests.yml)
 
 ## Installation
 
