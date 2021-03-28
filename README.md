@@ -4,6 +4,8 @@
 [![Maintainability][code_climate_maintainability_image]][code_climate_maintainability_page]
 [![Test Coverage][code_climate_test_coverage_image]][code_climate_test_coverage_page]
 
+https://github.com/petlove/armadillo/actions/workflows/ruby/badge.svg
+
 ## Installation
 
 Add this line to your application's Gemfile:
