@@ -1,6 +1,6 @@
 # [Armadillo][gem_page]
 
-[![Tests](https://github.com/petlove/armadillo/actions/workflows/tests.yml/badge.svg)](https://github.com/petlove/armadillo/actions/workflows/tests.yml)
+[![Build Status](https://github.com/petlove/armadillo/actions/workflows/tests.yml/badge.svg)](https://github.com/petlove/armadillo/actions/workflows/tests.yml)
 
 ## Installation
 
