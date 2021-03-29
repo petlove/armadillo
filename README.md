@@ -1,13 +1,48 @@
-# [Armadillo][gem_page]
+# Armadillo
 
-[![Build Status](https://github.com/petlove/armadillo/actions/workflows/tests.yml/badge.svg)](https://github.com/petlove/armadillo/actions/workflows/tests.yml)
+Environments manager
+
+[![Tests](https://github.com/petlove/armadillo/actions/workflows/tests.yml/badge.svg)](https://github.com/petlove/armadillo/actions/workflows/tests.yml)
+
+## Table of Contents
+- [Getting started](#getting-started)
+  - [Installation](#installation)
+- [Environment Mark](#environment-mark)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'my-gem', github: 'petlove/my-gem'
+gem 'armadillo', github: 'petlove/armadillo'
+```
+
+## Envinronment Mark
+
+![image](mark.png)
+
+Run this code bellow to set settings in `config/environment.rb`:
+
+```
+rails generate armadillo:install
+```
+
+These are the available settings:
+
+```ruby
+Armadillo.configure do |config|
+  config.rails_config = Rails.application.config
+  config.position = :right
+  config.envs = [
+    { name: :production, condition: Rails.env.production? && ENV['APP_ENV'] == 'production', show: false },
+    { name: :staging, condition: Rails.env.production? && ENV['APP_ENV'] == 'staging', show: true },
+    { name: :development, condition: Rails.env.production? && ENV['APP_ENV'] == 'development', show: true },
+    { name: :local, condition: Rails.env.development? && ENV['APP_ENV'] == 'local', show: true },
+    { name: :test, condition: ENV['APP_ENV'].match?(/test|codefresh|cf/), show: false }
+  ]
+end
 ```
 
 ## Contributing
@@ -22,13 +57,4 @@ gem 'my-gem', github: 'petlove/my-gem'
 
 The gem is available as open source under the terms of the [MIT License][mit_license_page].
 
-[gem_page]: https://github.com/petlove/my_gem
-[code_of_conduct_page]: https://github.com/petlove/my_gem/blob/master/CODE_OF_CONDUCT.md
 [mit_license_page]: https://opensource.org/licenses/MIT
-[contributor_convenant_page]: http://contributor-covenant.org
-[travis_status_image]: https://travis-ci.org/petlove/my_gem.svg?branch=master
-[travis_page]: https://travis-ci.org/petlove/my_gem
-[code_climate_maintainability_image]: https://api.codeclimate.com/v1/badges/2b9a2174ac460c3f44ad/maintainability
-[code_climate_maintainability_page]: https://codeclimate.com/github/petlove/my_gem/maintainability
-[code_climate_test_coverage_image]: https://api.codeclimate.com/v1/badges/2b9a2174ac460c3f44ad/test_coverage
-[code_climate_test_coverage_page]: https://codeclimate.com/github/petlove/my_gem/test_coverage

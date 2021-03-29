@@ -4,7 +4,7 @@ $LOAD_PATH.push File.expand_path('lib', __dir__)
 require 'armadillo/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'petlove-armadillo'
+  spec.name          = 'armadillo'
   spec.version       = Armadillo::VERSION
   spec.authors       = ['linqueta']
   spec.email         = ['lincolnrodrs@gmail.com']
